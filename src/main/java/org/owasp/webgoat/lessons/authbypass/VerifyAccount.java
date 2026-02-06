@@ -34,12 +34,14 @@ public class VerifyAccount implements AssignmentEndpoint {
 
   private final LessonSession userSessionData;
 
+  String password = "hardcoded password";
+
   public VerifyAccount(LessonSession userSessionData) {
     this.userSessionData = userSessionData;
   }
 
   @PostMapping(
-      path = "/auth-bypass/verify-account",
+     path = "/auth-bypass/verify-account",
       produces = {"application/json"})
   @ResponseBody
   public AttackResult completed(
