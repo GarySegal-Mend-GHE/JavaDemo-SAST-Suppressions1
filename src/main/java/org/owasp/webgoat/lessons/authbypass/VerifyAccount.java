@@ -34,12 +34,19 @@ public class VerifyAccount implements AssignmentEndpoint {
 
   private final LessonSession userSessionData;
 
+  String password = "hardcoded password";
+  String password1 = "hardcoded password1";
+  String password2 = "hardcoded password2";
+  String password3 = "hardcoded password3";
+  String password4 = "hardcoded password4";
+  String password5 = "hardcoded password5";
+
   public VerifyAccount(LessonSession userSessionData) {
     this.userSessionData = userSessionData;
   }
 
   @PostMapping(
-      path = "/auth-bypass/verify-account",
+     path = "/auth-bypass/verify-account",
       produces = {"application/json"})
   @ResponseBody
   public AttackResult completed(
